@@ -7,6 +7,6 @@ Maintainer: Shubham S. Deshmukh <shubhamdeshmukh40@yahoo.in>
 Description: It cleans the text such as package remove punctuation, Remove Special characters, Remove stop words, Remove HTML Tags,Convert all the characters into small letters and use the SnowballStemmer to stem the words
 License: None
 Encoding: UTF-8
-LazyData: true
-Imports:
+LazyData: FALSE
+Imports: 
   tidyverse,tidyr,readr,dplyr,tm,qdap,tidyverse,tidytext,ngram,tm.plugin.webmining,corpus,textclean,leaflet

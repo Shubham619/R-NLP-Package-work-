@@ -18,6 +18,22 @@ cleanme <- function(x)
   #To ignore the warnings during usage
   options(warn=-1)
   options("getSymbols.warning4.0"=FALSE)
+
+  req_packages<-c("tidyverse","tidyr","readr","dplyr","tm","qdap","tidyverse","tidytext","ngram","tm.plugin.webmining","corpus","textclean")
+
+
+  check.and.install.Package<-function(package_name){
+    if(!package_name%in%installed.packages()){
+      install.packages(package_name)
+    }
+  }
+
+  for(i in req_packages){
+    check.and.install.Package(as.character(i))
+  }
+
+
+  lapply(req_packages, require, character.only = TRUE)
   x<- replace_abbreviation(x)
   x<- replace_ordinal(x)
   x<- replace_symbol(x)
