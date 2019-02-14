@@ -1,6 +1,6 @@
 Package: cleanme
 Type: Package
-Title: Cleans the text
+Title: Cleans the text,load ml and nlp packages
 Version: 0.1.0
 Author: Shubham S. Deshmukh
 Maintainer: Shubham S. Deshmukh <shubhamdeshmukh40@yahoo.in>

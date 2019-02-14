@@ -1,4 +1,4 @@
-#'  @title  Cleans the text
+#'  @title  Cleans the text,load ml and nlp packages
 #'
 #'  @description It cleans the text such as package remove punctuation, Remove Special characters, Remove stop words, Remove HTML Tags,Convert all the characters into small letters and use the SnowballStemmer to stem the words
 #'
@@ -60,3 +60,81 @@ cleanme <- function(x)
 
 
 }
+
+ml_mode<-function(){
+  options(warn=-1)
+  options("getSymbols.warning4.0"=FALSE)
+
+  req_packages<-c("tidyverse","tidyr","readr","dplyr","tm","qdap","tidyverse","tidytext","ngram","tm.plugin.webmining","corpus",
+                  "ggplot2","textclean","caret","shiny","lubridate","glmnet","randomForest","xtable","xlsx","readxl","zoo","xts","Rcpp","data.table","purrr","rio","quantmod","magrittr","flexdashboard","flexdashboardPlus","plumber","reticulate","broom","C50","earth",
+                  "gbm","glmnet","mlr","FactoMineR","caTools","naniar","datasets","yardstick","psych","xgboost","tree","Rtsne","Amelia","fuzzywuzzyR","stringi","R.oo","rminer","text2vec","utf8","NLP","SnowballC","quanteda","MonkeyLearn","syuzhet","koRpus")
+
+
+  check.and.install.Package<-function(package_name){
+    if(!package_name%in%installed.packages()){
+      install.packages(package_name)
+    }
+  }
+
+  for(i in req_packages){
+    check.and.install.Package(as.character(i))
+  }
+
+
+  lapply(req_packages, require, character.only = TRUE)
+}
+
+nlp_mode<-function(){
+  options(warn=-1)
+  options("getSymbols.warning4.0"=FALSE)
+
+  req_packages<-c("tidyverse","tidyr","readr","dplyr","tm","qdap","tidyverse","tidytext","ngram","tm.plugin.webmining","corpus",
+                  "ggplot2","textclean","caret","readxl","rminer","text2vec","utf8","NLP","SnowballC","quanteda","MonkeyLearn","syuzhet","koRpus")
+
+
+  check.and.install.Package<-function(package_name){
+    if(!package_name%in%installed.packages()){
+      install.packages(package_name)
+    }
+  }
+
+  for(i in req_packages){
+    check.and.install.Package(as.character(i))
+  }
+
+
+  lapply(req_packages, require, character.only = TRUE)
+
+
+
+
+}
+
+
+
+
+EDA_mode<-function(){
+  options(warn=-1)
+  options("getSymbols.warning4.0"=FALSE)
+
+  req_packages<-c("xlsx","Amelia","ggplot2","tidyverse","shiny","plotly","wordcloud","wordcloud2","leaflet","corrplot","gganimate","r2d3","misc3d","rgl","ggtree")
+
+
+  check.and.install.Package<-function(package_name){
+    if(!package_name%in%installed.packages()){
+      install.packages(package_name)
+    }
+  }
+
+  for(i in req_packages){
+    check.and.install.Package(as.character(i))
+  }
+
+
+  lapply(req_packages, require, character.only = TRUE)
+
+
+
+
+}
+

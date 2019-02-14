@@ -1,1 +1,4 @@
 export(cleanme)
+export(ml_mode)
+export(nlp_mode)
+export(EDA_mode)
