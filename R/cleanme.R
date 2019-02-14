@@ -117,7 +117,7 @@ EDA_mode<-function(){
   options(warn=-1)
   options("getSymbols.warning4.0"=FALSE)
 
-  req_packages<-c("xlsx","Amelia","ggplot2","tidyverse","shiny","plotly","wordcloud","wordcloud2","leaflet","corrplot","gganimate","r2d3","misc3d","rgl","ggtree")
+  req_packages<-c("xlsx","Amelia","ggplot2","tidyverse","shiny","plotly","wordcloud","wordcloud2","leaflet","corrplot","gganimate","r2d3","misc3d","rgl")
 
 
   check.and.install.Package<-function(package_name){
